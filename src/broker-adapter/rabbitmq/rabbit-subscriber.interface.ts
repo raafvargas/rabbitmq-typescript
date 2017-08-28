@@ -16,8 +16,6 @@ export class RabbitSubscriber<T extends broker.Message> implements ISubscriber<T
                     channel.consume(queue, message => {
                         if (message) {
                             const body = <T>JSON.parse(message.content.toString());
-                            console.log(body);
-
                             if (body && onMessage(body)) {
                                 channel.ack(message);
                             }
