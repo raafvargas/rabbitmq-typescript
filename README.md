@@ -11,6 +11,5 @@ Simple application template to use RabbitMQ with TypeScript.
 
 ```
 npm i 
-npm run build
 npm run watch
 ```
