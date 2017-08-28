@@ -16,6 +16,6 @@ export class BrokerStartup<T extends Message> implements IStartup {
             this.subscriber = new RabbitSubscriber<T>();
             this.subscriber.subscribeWithHandler(this.queue, this.handler);
             resolve();
-        });
+        }).catch(err => console.error(err));
     }
 }

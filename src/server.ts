@@ -13,11 +13,10 @@ const servers: IStartup[] = new Array<IStartup>();
 
 servers.push(new BrokerStartup('example-queue', new ExampleHandler()));
 
-const initAll = (server: IStartup) => {
+const initAll = async (server: IStartup) => {
     console.log('%s Starting...', server.name);
-    server.Run()
-        .then(() => console.log('%s Started!', server.name))
-        .catch((err) => console.log(err));
+    await server.Run();
+    console.log('%s Started!', server.name);
 };
 
 servers.forEach(initAll);
