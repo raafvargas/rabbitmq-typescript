@@ -9,16 +9,16 @@ Simple application template to use RabbitMQ with TypeScript.
 
 ### Production
 
-´´´
+```
 npm i 
 npm run build
 node dist/out-tsc/server.js
-´´´
+```
 
 ### Development
 
-´´´
+```
 npm i 
 npm run build
 npm run watch
-´´´
+```
