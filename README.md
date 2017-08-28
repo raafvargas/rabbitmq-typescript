@@ -7,14 +7,6 @@ Simple application template to use RabbitMQ with TypeScript.
 * Environment variable RABBITMQ_ADDRESS should set your RabbitMQ address.
 * By default, it'll use 'amqp://guest:guest@localhost:5672'
 
-### Production
-
-```
-npm i 
-npm run build
-node dist/out-tsc/server.js
-```
-
 ### Development
 
 ```
